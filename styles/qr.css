@@ -1,10 +1,117 @@
+:root {
+  --amarillo: #fff2af;
+  --verde-claro: #90d1ca;
+  --verde: #129990;
+  --verde-oscuro: #096b68;
+  --blanco: #ffffff;
+  --gris: #f6f6f6;
+}
+
 body {
-  background-color: #f0f0f0;
+  background-color: var(--verde-claro);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+header {
+  background: linear-gradient(to right, var(--verde-claro), var(--blanco));
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--verde-oscuro);
+  display: block;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--verde);
+  padding-top: 60px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav.open {
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  border-bottom: 1px solid #0d7f79;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 2;
+}
+
+.overlay-menu.active {
+  display: block;
 }
 
 .card {
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
+  background-color: #129990;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+  
+}
+.card:hover{
+  transform: scale(1.02);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); 
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  
 }
 
 .map-card {
@@ -13,9 +120,9 @@ body {
 }
 
 .map-card:hover {
-  border-color: #007bff;
-  box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
-  transform: translateY(-5px);
+  border-color: var(--verde);
+  box-shadow: 0 0 15px rgba(18, 153, 144, 0.8);
+  transform: translateY(-7px);
 }
 
 .map-container {
@@ -26,3 +133,52 @@ body {
 .map-container iframe {
   border: none;
 }
+
+.footer-custom {
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 10px 0;
+  margin-top: 40px;
+  border-top: 10px solid var(--verde-oscuro);
+  text-align: center;
+}
+
+.footer-custom p {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer-custom strong {
+  font-size: 1.2rem;
+  color: var(--blanco);
+}
+
+#btnActualizarInfo > button{
+  background-color: #129990;
+  border-color: #129990;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+#btnActualizarInfo > button:hover{
+  background-color: #096b68;
+  border-color: #096b68;
+  font-size: medium;
+  transform: scale(1.05);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+#vacunas > option {
+  color: black;
+}
+
+#vacunas option:first-child {
+  display: none;
+}
+ #alergias > option{
+  color: black;
+ }
+ #alergias option:first-child {
+  display: none;
+ }
+
