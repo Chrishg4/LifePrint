@@ -3,49 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../styles/infoqr.css">
-    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="../styles/infoqr.css">
+    <title>QRPetCare</title>
 </head>
 <body>
-      <header>
-        <h1>QRPetCare</h1>
-        <p>Innovación en la identificación y Recuperación de Mascotas a través de Códigos QR</p>
-    </header>
+    <header>
+    <div class="logo">
+      <img src="../img/Logo.png" alt="Logo" />
+      <strong>QRPetCare</strong>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
 
-    <div class="container">
-        <section class="hero" id="inicio">
-            <h2>Bienvenidos a QRPetCare</h2>
-            <p>Una solución innovadora que utiliza códigos QR para la identificación y el seguimiento médico de mascotas, garantizando su seguridad y bienestar.</p>
-        </section>
+    <div class="overlay-menu" onclick="toggleMenu()"></div>
 
-        <section class="features" id="caracteristicas">
-            <div class="feature-card">
-                <h3>Identificación Rápida</h3>
-                <p>La mascota tendrá una plaquita con un código QR único que, al ser escaneado por cualquier dispositivo móvil, redirigirá a una página web con la información de contacto del dueño.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Gestión de Datos en Tiempo Real</h3>
-                <p>Los dueños podrán actualizar sus datos de contacto a través de una plataforma web en caso de cambios, evitando la necesidad de reemplazar la plaquita física.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Recuperación Eficiente</h3>
-                <p>Facilita la recuperación de mascotas extraviadas al proporcionar información de contacto al escanear el QR.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Portal Web Integrado</h3>
-                <p>Plataforma centralizada para que dueños y veterinarias gestionen la información de las mascotas en tiempo real.</p>
-            </div>
-        </section>
+    <nav id="sideMenu">
+      <ul>
+        <li><a href="./infoqr.html">Información QRPetCare</a></li>
+        <li><a href="./qr.html">QRPetCare</a></li>
+      </ul>
+    </nav>
 
-        <section class="about" id="acerca">
-            <h2>Acerca de QRPetCare</h2>
-            <p>El proyecto QRPetCare responde a la necesidad de proteger y cuidar a las mascotas mediante un sistema tecnológico avanzado. Nuestras plaquitas con códigos QR ofrecen una solución moderna que no solo ayuda a localizar mascotas extraviadas, sino que también optimiza el seguimiento médico. Con un portal web intuitivo, los dueños y las clínicas veterinarias pueden mantener un historial clínico completo y actualizado, mejorando el bienestar animal y la experiencia del usuario.</p>
-        </section>
+<div id="carousel1" class="carousel slide position-relative" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"></button>
+        <!-- <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"></button> -->
     </div>
 
-    <footer id="contacto">
-        <p>© 2025 QRPetCare. Todos los derechos reservados.</p>
-        <p>Contáctanos: info@qrpetcare.com</p>
-    </footer>
+<div class="carousel-overlay position-absolute top-50 start-50 translate-middle text-center w-100 px-3" style="z-index: 10;">
+    <div class="py-3 px-4 rounded-4 mx-auto text-white" style="background-color: rgba(0, 0, 0, 0.6); max-width: 600px; border-radius: 20px;">
+        <h1 class="fw-bold fs-2 fs-md-1">¡Bienvenidos a QRPetCare!</h1>
+        <p class="fs-5">Innovación en la Identificación y Recuperación de Mascotas</p>
+    </div>
+</div>
+
+
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="../img/mascota.jpg" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="../img/mascota2.jpg" alt="Imagen 2">
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+
+    </section>
+    <div class="content">
+    <div class="container1" style="margin-top: 80px;">
+        <p class="descripcion-pagina">
+            Una plataforma integral que responde a la necesidad de protegery cuidar mascotas mediante un sistema tecnológico avanzado.<strong>Pet's History</strong>, enfocada en el registro médico digital de las mascotas; 
+            <strong>Adopta Pet</strong>, un espacio para fomentar la adopción responsable; y <strong>Qcare</strong>, una solución para el seguimiento y la administración del bienestar animal.
+            LifePrint une tecnología y amor por los animales para ofrecer herramientas prácticas, educativas y confiables que contribuyen al cuidado y salud de nuestras mascotas.
+        </p>
+    </div>
+</div>
+
+<div class="container2">
+    <div class="wrapper">
+        <div class="card_area">
+
+            <!-- Identificación Rapida -->
+            <div class="card">
+                <img src="../img/dog1.jpg">
+                <div class="overlay">
+                    <h2><strong>Identificación Rápida</strong></h2>
+                    <p>
+                        La mascota tendra un QR único que al ser escaneado por cualquier dispositivo, redirigira a una pagina web con la información del dueño.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gestión en tiempo real -->
+            <div class="card">
+                <img src="../img/gestion.jpg">
+                <div class="overlay">
+                    <h2><strong>Gestión de Datos en Tiempo Real</strong></h2>
+                    <p>
+                        Los dueños podrán actualizar sus datos de contacto a través de una plataforma web en caso de cambios, evitando la necesidad de reemplazar la plaquita fisica.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Recuperación eficiente -->
+            <div class="card">
+                <img src="../img/dog3.jpg">
+                <div class="overlay">
+                    <h2><strong>Recuperación Eficiente</strong></h2>
+                    <p>
+                        Facilita la recuperación de mascotas extraviadas al proporcionar información de contacto al escanear el QR.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+</div> 
+
+<footer class="footer-custom text-center mt-5">
+    <div class="container py-3">
+      <p><strong>QRPetCare</strong></p>
+      <p>Desarrollado por estudiantes de Ingeniería en Tecnologías de la Información, Universidad Técnica Nacional.</p>
+      <p>&copy; 2025</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+ <script>
+      function toggleMenu() {
+        document.getElementById("sideMenu").classList.toggle("open");
+        document.querySelector(".overlay-menu").classList.toggle("active");
+      }
+    </script>
+
+    
 </body>
 </html>
