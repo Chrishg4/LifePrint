@@ -1,0 +1,28 @@
+body {
+  background-color: #f0f0f0;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.map-card {
+  border: 2px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.map-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+.map-container {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.map-container iframe {
+  border: none;
+}
