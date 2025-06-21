@@ -231,6 +231,48 @@ nav ul li a:hover {
   }
 }
 
+
+.btn-custom {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-agregar {
+  background-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+}
+
+.btn-agregar:hover {
+  background-color: var(--verde-claro);
+  transform: translateY(-2px);
+}
+
+.btn-eliminar {
+  background-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+}
+
+.btn-eliminar:hover {
+  background-color: var(--verde-claro);
+  transform: translateY(-2px);
+}
+
+.btn-modificar {
+  background-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+}
+
+.btn-modificar:hover {
+  background-color: var(--verde-claro);
+  transform: translateY(-2px);
+}
+
 /* ----------------FOOTER----------------*/
 
 .footer-custom {
@@ -250,4 +292,114 @@ nav ul li a:hover {
 .footer-custom strong {
   font-size: 1.2rem;
   color: var(--blanco);
+}
+
+/* --- Panel de Accesibilidad --- */
+#accesibilidad-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:  #00897B;
+    color: #fafafa;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#accesibilidad-panel {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 240px;
+    z-index: 999;
+}
+
+#accesibilidad-panel.active {
+    display: block;
+}
+
+#accesibilidad-panel button {
+    display: block;
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+    font-size: 14px;
+    background-color:  #00897B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+}
+
+#accesibilidad-panel button:hover {
+    background-color:  #00897B;
+}
+
+/* -------- ACCESIBILIDAD -------- */
+
+/* CONTRASTE ALTO */
+.contraste,
+.contraste * {
+    background-color: #000 !important;
+    color: #FFF !important;
+    border-color: #FFF !important;
+}
+
+.contraste a {
+    color: #00897B !important;
+    text-decoration: underline !important;
+}
+
+.contraste input,
+.contraste textarea,
+.contraste select,
+.contraste button {
+    background-color: #111 !important;
+    color: #FFF !important;
+    border: 1px solid #FFF !important;
+}
+
+/* RESALTADO DE ENLACES */
+.resaltado a {
+    background-color: #FBC02D !important;
+    color: red !important;
+    font-weight: bold;
+}
+
+/* ESPACIADO DE TEXTO */
+.espaciado-texto * {
+    letter-spacing: 0.12em !important;
+    line-height: 1.8 !important;
+}
+
+/* FUENTE GRANDE */
+.fuente-grande {
+    font-size: 22px !important;
+}
+
+/* CURSOR PERSONALIZADO */
+.cursor-grande * {
+    cursor: pointer !important;
+}
+
+/* CENTRADO DE TEXTO */
+.texto-centrado {
+    text-align: center !important;
+}
+
+
+/* SATURACIÓN (COLORES MÁS VIVOS) */
+.saturacion * {
+    filter: saturate(200%) contrast(130%) brightness(110%) !important;
 }

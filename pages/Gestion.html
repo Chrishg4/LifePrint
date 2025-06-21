@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style/gestion.css" />
+  <link rel="stylesheet" href="../styles/gestion.css" />
 </head>
 
 <body>
@@ -25,9 +25,9 @@
 
   <nav id="sideMenu">
     <ul>
-      <li><a href="../historialMedico.html">Historial Médico</a></li>
-      <li><a href="../perfilanimal/perfilanimal.html">Perfiles</a></li>
-      <li><a href="../gestion/gestion.html">Tratamientos</a></li>
+      <li><a href="historialMedico.html">Historial Médico</a></li>
+      <li><a href="perfilanimal.html">Perfiles</a></li>
+      <li><a href="Gestion.html">Tratamientos</a></li>
       <li><a href="Alertas.html">Alertas</a></li>
       <li><a href="Privacidad.html">Privacidad</a></li>
       <li><a href="Ajustes.html">Ajustes</a></li>
@@ -135,12 +135,69 @@
     </div>
   </footer>
 
+    <!-- BOTÓN DE ACCESIBILIDAD Y PANEL -->
+  <button id="accesibilidad-toggle">⚙️</button>
+  <div id="accesibilidad-panel">
+    <button onclick="toggleContraste()">Contraste oscuro</button>
+    <button onclick="resaltarEnlaces()">Resaltar enlaces</button>
+    <button onclick="cambiarTamanoFuente('aumentar')">Agrandar texto</button>
+    <button onclick="cambiarTamanoFuente('disminuir')">Reducir texto</button>
+    <button onclick="document.body.classList.toggle('espaciado-texto')">Espaciado de texto</button>
+    <button onclick="document.body.classList.toggle('cursor-grande')">Activar Cursor</button>
+    <button onclick="alinearTexto()">Texto alineado</button>
+    <button onclick="document.body.classList.toggle('saturacion')">Activar Saturación</button>
+    <button onclick="leerContenido()">Leer contenido principal</button>
+    <button onclick="detenerLectura()">Detener lectura</button>
+  </div>
+
   <script>
     function toggleMenu() {
-      document.getElementById("sideMenu").classList.toggle("open");
-      document.querySelector(".overlay").classList.toggle("active");
+        document.getElementById("sideMenu").classList.toggle("open");
+        document.querySelector(".overlay").classList.toggle("active");
+      }
+
+      document.getElementById('accesibilidad-toggle').addEventListener('click', () => {
+      document.getElementById('accesibilidad-panel').classList.toggle('active');
+    });
+
+
+       function toggleContraste() {
+      document.body.classList.toggle('contraste');
+    }
+
+    function resaltarEnlaces() {
+      document.body.classList.toggle('resaltado');
+    }
+
+    let fontSize = 1;
+    function cambiarTamanoFuente(accion) {
+      if (accion === 'aumentar') fontSize += 0.1;
+      if (accion === 'disminuir') fontSize = Math.max(1, fontSize - 0.1);
+      document.body.style.fontSize = fontSize + 'em';
+    }
+
+    function cambiarCursor() {
+      document.body.classList.toggle('cursor-grande');
+    }
+
+    function alinearTexto() {
+      document.body.classList.toggle('texto-centrado');
+    }
+
+    function cambiarSaturacion() {
+      document.body.classList.toggle('saturado');
+    }
+
+    function leerContenido() {
+      const texto = document.getElementById('contenido-principal').innerText;
+      const voz = new SpeechSynthesisUtterance(texto);
+      voz.lang = 'es-ES';
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(voz);
+    }
+    function detenerLectura() {
+      window.speechSynthesis.cancel();
     }
   </script>
 </body>
-
 </html>
