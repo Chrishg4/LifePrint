@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfiles de animales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/perfilanimal.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../img/logo1.png" alt="Logo" />
+        <strong>Perfiles de Animales</strong>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <div class="overlay" onclick="toggleMenu()"></div>
+
+    <nav id="sideMenu">
+      <ul>
+        <li><a href="../historialMedico.html">Historial Médico</a></li>
+        <li><a href="../perfilanimal/perfilanimal.html">Perfiles</a></li>
+        <li><a href="../gestion/gestion.html">Tratamientos</a></li>
+        <li><a href="Alertas.html">Alertas</a></li>
+        <li><a href="Privacidad.html">Privacidad</a></li>
+        <li><a href="Ajustes.html">Ajustes</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Conoce a tus Mascotas</h1>
+        <p>
+          Revisa y gestiona los perfiles médicos y cuidados de tus animales
+          desde un solo lugar con toda la información que necesitas siempre a
+          mano.
+        </p>
+        <img src="../img/mancha.png" alt="" class="img-mancha" />
+      </div>
+      <img src="../img/gato.png" alt="gato" class="img-gato"/>
+    </section>
+
+    <main class="main-content">
+      <div class="pet-grid">
+        <article class="pet-card">
+          <img src="../img/feito-1.png" alt="feito" />
+          <div class="pet-info">
+            <h3>Feito</h3>
+            <p><strong>Raza:</strong> Pug</p>
+            <p><strong>Especie:</strong> Perro</p>
+            <p><strong>Edad:</strong> 2 años</p>
+            <p><strong>Peso:</strong> 12 kg</p>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <img src="../img/conejito-1.png" alt="feito" />
+          <div class="pet-info">
+            <h3>Caramelito</h3>
+            <p><strong>Raza:</strong> Mestizo</p>
+            <p><strong>Especie:</strong> Conejo</p>
+            <p><strong>Edad:</strong> 1 año</p>
+            <p><strong>Peso:</strong> 1 kg</p>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <img src="../img/gato3.png" alt="feito" />
+          <div class="pet-info">
+            <h3>Lui</h3>
+            <p><strong>Raza:</strong> Mestizo</p>
+            <p><strong>Especie:</strong> Gato</p>
+            <p><strong>Edad:</strong> 7 meses</p>
+            <p><strong>Peso:</strong> 12 kg</p>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <img src="../img/perrito-1.png" alt="feito" />
+          <div class="pet-info">
+            <h3>Molly</h3>
+            <p><strong>Raza:</strong> Labrador</p>
+            <p><strong>Especie:</strong> Perro</p>
+            <p><strong>Edad:</strong> 2 años</p>
+            <p><strong>Peso:</strong> 38 kg</p>
+          </div>
+        </article>
+
+        <!-- Puedes duplicar el <article> para más mascotas -->
+      </div>
+    </main>
+
+    <footer class="footer-custom">
+    <div class="container py-3">
+      <p><strong>LifePrint</strong></p>
+        <p>Desarrollado por estudiantes de Ingeniería en Tecnologías de la Información, Universidad Técnica Nacional.</p>
+      <p>&copy; 2025</p>
+    </div>
+  </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("sideMenu").classList.toggle("open");
+        document.querySelector(".overlay").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
